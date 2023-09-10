@@ -8,6 +8,11 @@ namespace EstudoAPI.Domain.Entities
 {
     public class Pessoa : Entity {
 
+        public Pessoa()
+        {
+
+        }
+
         public Pessoa(string nome, string cpf, DateTime nascimento) {
             Id = Guid.NewGuid();
             Nome = nome;

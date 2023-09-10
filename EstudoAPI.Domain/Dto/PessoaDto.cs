@@ -6,7 +6,6 @@ namespace EstudoAPI.Domain.Dto
     [DisplayName("Pessoa")]
     public class PessoaDto
     {
-
         public PessoaDto() =>
             Id = Guid.NewGuid();
 

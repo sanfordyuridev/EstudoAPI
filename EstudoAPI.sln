@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.Domain", "EstudoAPI.Domain\EstudoAPI.Domain.csproj", "{54BBAACC-334F-4CE1-888A-1BD7F37346B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.Domain", "EstudoAPI.Domain\EstudoAPI.Domain.csproj", "{54BBAACC-334F-4CE1-888A-1BD7F37346B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.Infra", "EstudoAPI.Infra.Data\EstudoAPI.Infra.csproj", "{F98B0532-7131-42C5-B9EC-B03BC0E5336C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.Infra", "EstudoAPI.Infra.Data\EstudoAPI.Infra.csproj", "{F98B0532-7131-42C5-B9EC-B03BC0E5336C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.Application", "EstudoAPI.Application\EstudoAPI.Application.csproj", "{B42073D8-323A-4907-A1CE-EDBE2F7AA30D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.Application", "EstudoAPI.Application\EstudoAPI.Application.csproj", "{B42073D8-323A-4907-A1CE-EDBE2F7AA30D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.CrossCutting", "EstudoAPI.CrossCutting\EstudoAPI.CrossCutting.csproj", "{04E9338F-E227-45E7-8FB3-44482E37297D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.CrossCutting", "EstudoAPI.CrossCutting\EstudoAPI.CrossCutting.csproj", "{04E9338F-E227-45E7-8FB3-44482E37297D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.Api", "EstudoAPI.Api\EstudoAPI.Api.csproj", "{860B041A-AAA5-422D-BEF1-B4A345EA78B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.Api", "EstudoAPI.Api\EstudoAPI.Api.csproj", "{860B041A-AAA5-422D-BEF1-B4A345EA78B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.Service", "EstudoAPI.Service\EstudoAPI.Service.csproj", "{6E503B5B-130E-4E8F-9A57-9035DACC5B39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{860B041A-AAA5-422D-BEF1-B4A345EA78B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{860B041A-AAA5-422D-BEF1-B4A345EA78B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{860B041A-AAA5-422D-BEF1-B4A345EA78B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E503B5B-130E-4E8F-9A57-9035DACC5B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E503B5B-130E-4E8F-9A57-9035DACC5B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E503B5B-130E-4E8F-9A57-9035DACC5B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E503B5B-130E-4E8F-9A57-9035DACC5B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
