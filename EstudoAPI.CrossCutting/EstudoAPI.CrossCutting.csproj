@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EstudoAPI.Application\EstudoAPI.Application.csproj" />
+    <ProjectReference Include="..\EstudoAPI.Domain\EstudoAPI.Domain.csproj" />
+    <ProjectReference Include="..\EstudoAPI.Infra.Data\EstudoAPI.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

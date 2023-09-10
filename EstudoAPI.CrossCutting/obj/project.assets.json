@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "EstudoAPI.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EstudoAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EstudoAPI.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EstudoAPI.Application.dll": {}
+        }
+      },
+      "EstudoAPI.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EstudoAPI.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EstudoAPI.Domain.dll": {}
+        }
+      },
+      "EstudoAPI.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EstudoAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EstudoAPI.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EstudoAPI.Infra.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EstudoAPI.Application/1.0.0": {
+      "type": "project",
+      "path": "../EstudoAPI.Application/EstudoAPI.Application.csproj",
+      "msbuildProject": "../EstudoAPI.Application/EstudoAPI.Application.csproj"
+    },
+    "EstudoAPI.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EstudoAPI.Domain/EstudoAPI.Domain.csproj",
+      "msbuildProject": "../EstudoAPI.Domain/EstudoAPI.Domain.csproj"
+    },
+    "EstudoAPI.Infra/1.0.0": {
+      "type": "project",
+      "path": "../EstudoAPI.Infra.Data/EstudoAPI.Infra.csproj",
+      "msbuildProject": "../EstudoAPI.Infra.Data/EstudoAPI.Infra.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "EstudoAPI.Application >= 1.0.0",
+      "EstudoAPI.Domain >= 1.0.0",
+      "EstudoAPI.Infra >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\yurir\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.CrossCutting\\EstudoAPI.CrossCutting.csproj",
+      "projectName": "EstudoAPI.CrossCutting",
+      "projectPath": "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.CrossCutting\\EstudoAPI.CrossCutting.csproj",
+      "packagesPath": "C:\\Users\\yurir\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.CrossCutting\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\yurir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.Application\\EstudoAPI.Application.csproj": {
+              "projectPath": "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.Application\\EstudoAPI.Application.csproj"
+            },
+            "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.Domain\\EstudoAPI.Domain.csproj": {
+              "projectPath": "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.Domain\\EstudoAPI.Domain.csproj"
+            },
+            "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.Infra.Data\\EstudoAPI.Infra.csproj": {
+              "projectPath": "D:\\Projetos\\ASP.NET\\EstudoAPI\\EstudoAPI.Infra.Data\\EstudoAPI.Infra.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

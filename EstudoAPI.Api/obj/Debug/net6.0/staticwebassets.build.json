@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0bt3fRXpcmfqPHPW0EOVNbPElx3hwMO9lxLfWjehHYk=",
+  "Source": "EstudoAPI.Api",
+  "BasePath": "_content/EstudoAPI.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

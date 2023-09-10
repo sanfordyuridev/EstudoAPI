@@ -1,4 +1,4 @@
-namespace EstudoAPI
+namespace EstudoAPI.Api
 {
     public class WeatherForecast
     {

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EstudoAPI.Infra/1.0.0": {
+        "dependencies": {
+          "EstudoAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EstudoAPI.Infra.dll": {}
+        }
+      },
+      "EstudoAPI.Domain/1.0.0": {
+        "runtime": {
+          "EstudoAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EstudoAPI.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EstudoAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
