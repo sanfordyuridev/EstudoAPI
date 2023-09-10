@@ -1,7 +1,0 @@
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.csproj.AssemblyReference.cache
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.AssemblyInfoInputs.cache
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.AssemblyInfo.cs
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.csproj.CoreCompileInputs.cache
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.MvcApplicationPartsAssemblyInfo.cs
-D:\Projetos\ASP.NET\EstudoAPI\EstudoAPI\obj\Debug\net6.0\EstudoAPI.MvcApplicationPartsAssemblyInfo.cache
