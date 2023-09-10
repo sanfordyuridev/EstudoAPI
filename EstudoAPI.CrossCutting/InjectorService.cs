@@ -1,4 +1,5 @@
 ﻿using EstudoAPI.Domain.Interfaces.Services;
+using EstudoAPI.Service.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EstudoAPI.CrossCutting
@@ -7,7 +8,7 @@ namespace EstudoAPI.CrossCutting
     {
         public static void RegisterService(this IServiceCollection services)
         {
-            services.AddScoped<IPessoaService, IPessoaService>();
+            services.AddScoped<IPessoaService, PessoaService>();
         }
     }
 }

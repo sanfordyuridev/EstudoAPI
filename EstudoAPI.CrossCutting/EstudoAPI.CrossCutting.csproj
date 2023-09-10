@@ -14,6 +14,7 @@
     <ProjectReference Include="..\EstudoAPI.Application\EstudoAPI.Application.csproj" />
     <ProjectReference Include="..\EstudoAPI.Domain\EstudoAPI.Domain.csproj" />
     <ProjectReference Include="..\EstudoAPI.Infra.Data\EstudoAPI.Infra.csproj" />
+    <ProjectReference Include="..\EstudoAPI.Service\EstudoAPI.Service.csproj" />
   </ItemGroup>
 
 </Project>

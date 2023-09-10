@@ -1,3 +1,6 @@
+using EstudoAPI.CrossCutting;
+using EstudoAPI.Service.AutoMapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(typeof(AutoMapping));
+
+builder.Services.RegisterDependencies(builder.Configuration.GetValue<string>("ConnectionStrings:DefaultConnection"));
 
 var app = builder.Build();
 

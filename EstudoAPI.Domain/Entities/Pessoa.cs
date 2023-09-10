@@ -20,9 +20,9 @@ namespace EstudoAPI.Domain.Entities
             Nascimento = nascimento;
         }
 
-        public string Nome { get; private set; }
-        public string CPF { get; private set; }
-        public DateTime Nascimento { get; private set; }
+        public string Nome { get; set; }
+        public string CPF { get; set; }
+        public DateTime Nascimento { get; set; }
 
 
     }

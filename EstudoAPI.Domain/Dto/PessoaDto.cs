@@ -19,13 +19,13 @@ namespace EstudoAPI.Domain.Dto
         public Guid Id { get; set; }
 
         [Required(ErrorMessage = "Campo 'Nome' obrigatório.")]
-        public string Nome { get; private set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo 'CPF' obrigatório.")]
-        public string CPF { get; private set; }
+        public string CPF { get; set; }
 
         [Required(ErrorMessage = "Campo 'Nascimento' obrigatório.")]
-        public DateTime Nascimento { get; private set; }
+        public DateTime Nascimento { get; set; }
     }
 
 }
