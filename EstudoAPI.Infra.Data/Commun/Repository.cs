@@ -1,6 +1,7 @@
 ﻿using EstudoAPI.Domain.Entities;
 using EstudoAPI.Domain.Repositories;
 using EstudoAPI.Infra.Context;
+using System.Linq.Expressions;
 
 namespace EstudoAPI.Repositories.Commun
 {
@@ -30,11 +31,14 @@ namespace EstudoAPI.Repositories.Commun
             _context.SaveChanges();
         }
 
-        public TModel Get(int id) 
+        public TModel Get(Guid id) 
             => _context.Set<TModel>().Where(m => m.Id.Equals(id)).FirstOrDefault();
         
 
         public IQueryable<TModel> GetAll()
             => _context.Set<TModel>().AsQueryable();
+
+        public TModel GetBy(Expression<Func<TModel, bool>> predicate)
+            => _context.Set<TModel>().Where(predicate).FirstOrDefault();
     }
 }
