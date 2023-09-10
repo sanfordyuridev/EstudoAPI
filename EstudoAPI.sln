@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.CrossCutting", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.Api", "EstudoAPI.Api\EstudoAPI.Api.csproj", "{860B041A-AAA5-422D-BEF1-B4A345EA78B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoAPI.Service", "EstudoAPI.Service\EstudoAPI.Service.csproj", "{6E503B5B-130E-4E8F-9A57-9035DACC5B39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoAPI.Service", "EstudoAPI.Service\EstudoAPI.Service.csproj", "{6E503B5B-130E-4E8F-9A57-9035DACC5B39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
