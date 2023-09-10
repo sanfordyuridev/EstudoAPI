@@ -1,6 +1,7 @@
 ﻿using EstudoAPI.Domain.Entities;
 using EstudoAPI.Domain.Repositories;
 using EstudoAPI.Infra.Context;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace EstudoAPI.Repositories.Commun
@@ -21,12 +22,14 @@ namespace EstudoAPI.Repositories.Commun
 
         public void Update(TModel model)
         {
+            DetachLocal(model);
             _context.Set<TModel>().Update(model);
             _context.SaveChanges();
         }
 
         public void Delete(TModel model)
         {
+            DetachLocal(model);
             _context.Set<TModel>().Remove(model);
             _context.SaveChanges();
         }
@@ -40,5 +43,14 @@ namespace EstudoAPI.Repositories.Commun
 
         public TModel GetBy(Expression<Func<TModel, bool>> predicate)
             => _context.Set<TModel>().Where(predicate).FirstOrDefault();
+
+        private void DetachLocal(TModel model)
+        {
+            TModel local = _context.Set<TModel>().Local.Where(m => m.Id.Equals(model.Id)).FirstOrDefault();
+            if (local != null)
+            {
+                _context.Entry(local).State = EntityState.Detached;
+            }
+        }
     }
 }
