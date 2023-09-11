@@ -30,6 +30,17 @@ namespace EstudoAPI.Api.Controllers
             return Ok(pessoa);
         }
 
+        [HttpGet("cpf/{cpf}")]
+        public IActionResult PorCpf(string cpf)
+        {
+            PessoaDto pessoa = _pessoasService.GetByCpf(cpf);
+            if (pessoa == null)
+            {
+                return NotFound();
+            }
+            return Ok(pessoa);
+        }
+
         [HttpPost]
         public IActionResult Post(PessoaDto pessoa)
         {
