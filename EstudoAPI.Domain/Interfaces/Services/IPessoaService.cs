@@ -5,6 +5,6 @@ namespace EstudoAPI.Domain.Interfaces.Services
 {
     public interface IPessoaService : IService<PessoaDto>
     {
-        PessoaDto GetByCpf(string cpfName);
+        Task<PessoaDto> GetByCpf(string cpfName);
     }
 }

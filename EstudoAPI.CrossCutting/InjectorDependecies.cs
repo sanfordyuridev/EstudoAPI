@@ -1,11 +1,6 @@
 ﻿using EstudoAPI.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EstudoAPI.CrossCutting
 {
@@ -13,7 +8,11 @@ namespace EstudoAPI.CrossCutting
     {
         public static void RegisterDependencies(this IServiceCollection services, string defaultConnection)
         {
-            services.AddDbContext<EstudoContext>(opts => opts.UseMySQL(defaultConnection));
+            services.AddDbContext<EstudoContext>(opts =>
+            {
+                opts.UseMySQL(defaultConnection);
+                opts.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            });
             services.RegisterRepository();
             services.RegisterService();
         }

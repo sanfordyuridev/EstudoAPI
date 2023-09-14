@@ -20,9 +20,9 @@ namespace EstudoAPI.Api.Controllers
             => Ok(_pessoasService.GetAll());
 
         [HttpGet("{id}")]
-        public IActionResult PorId(Guid id)
+        public async Task<IActionResult> PorId(Guid id)
         {
-            PessoaDto pessoa = _pessoasService.Get(id);
+            PessoaDto pessoa = await _pessoasService.Get(id);
             if (pessoa == null)
             {
                 return NotFound();
@@ -31,9 +31,9 @@ namespace EstudoAPI.Api.Controllers
         }
 
         [HttpGet("cpf/{cpf}")]
-        public IActionResult PorCpf(string cpf)
+        public async Task<IActionResult> PorCpf(string cpf)
         {
-            PessoaDto pessoa = _pessoasService.GetByCpf(cpf);
+            PessoaDto pessoa = await _pessoasService.GetByCpf(cpf);
             if (pessoa == null)
             {
                 return NotFound();
@@ -42,34 +42,34 @@ namespace EstudoAPI.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(PessoaDto pessoa)
+        public async Task<IActionResult> Post(PessoaDto pessoa)
         {
-            _pessoasService.Create(pessoa);
+            await _pessoasService.Create(pessoa);
             return Ok();
         }
 
         [HttpPut]
-        public IActionResult Put(PessoaDto pessoa)
+        public async Task<IActionResult> Put(PessoaDto pessoa)
         {
             if (_pessoasService.Get(pessoa.Id) == null)
             {
                 return NotFound();
             }
 
-            _pessoasService.Update(pessoa);
+            await _pessoasService.Update(pessoa);
             return Ok();
         }
 
         [HttpDelete]
-        public IActionResult Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            PessoaDto pessoa = _pessoasService.Get(id);
+            PessoaDto pessoa = await _pessoasService.Get(id);
             if(pessoa == null)
             {
                 return NotFound();
             }
 
-            _pessoasService.Delete(pessoa);
+            await _pessoasService.Delete(pessoa);
             return Ok();
         }
     }

@@ -10,47 +10,28 @@ namespace EstudoAPI.Repositories.Commun
     {
         protected readonly EstudoContext _context;
 
-        public Repository(EstudoContext context) 
+        public Repository(EstudoContext context)
             => _context = context;
-        
 
         public void Create(TModel model)
-        {
-            _context.Set<TModel>().Add(model); 
-            _context.SaveChanges();
-        }
+            => _context.Set<TModel>().Add(model);
 
         public void Update(TModel model)
-        {
-            DetachLocal(model);
-            _context.Set<TModel>().Update(model);
-            _context.SaveChanges();
-        }
+            => _context.Set<TModel>().Update(model);
 
         public void Delete(TModel model)
-        {
-            DetachLocal(model);
-            _context.Set<TModel>().Remove(model);
-            _context.SaveChanges();
-        }
+            => _context.Set<TModel>().Remove(model);
 
-        public TModel Get(Guid id) 
-            => _context.Set<TModel>().Where(m => m.Id.Equals(id)).FirstOrDefault();
-        
+        public ValueTask<TModel> Get(Guid id)
+            => _context.Set<TModel>().FindAsync(id);
 
         public IQueryable<TModel> GetAll()
             => _context.Set<TModel>().AsQueryable();
 
-        public TModel GetBy(Expression<Func<TModel, bool>> predicate)
-            => _context.Set<TModel>().Where(predicate).FirstOrDefault();
+        public ValueTask<TModel> GetBy(Expression<Func<TModel, bool>> predicate)
+            => new ValueTask<TModel>(_context.Set<TModel>().Where(predicate).FirstOrDefaultAsync());
 
-        private void DetachLocal(TModel model)
-        {
-            TModel local = _context.Set<TModel>().Local.Where(m => m.Id.Equals(model.Id)).FirstOrDefault();
-            if (local != null)
-            {
-                _context.Entry(local).State = EntityState.Detached;
-            }
-        }
+        public Task SalvarAlteracoes()
+            => _context.SaveChangesAsync();
     }
 }

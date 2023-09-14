@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace EstudoAPI.Domain.Repositories
 {
@@ -12,8 +7,9 @@ namespace EstudoAPI.Domain.Repositories
         void Create(TModel model);
         void Update(TModel model);
         void Delete(TModel model);
+        Task SalvarAlteracoes();
         IQueryable<TModel> GetAll();
-        TModel Get(Guid id);
-        TModel GetBy(Expression<Func<TModel, bool>> predicate);
+        ValueTask<TModel> Get(Guid id);
+        ValueTask<TModel> GetBy(Expression<Func<TModel, bool>> predicate);
     }
 }

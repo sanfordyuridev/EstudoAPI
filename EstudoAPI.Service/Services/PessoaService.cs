@@ -19,23 +19,31 @@ namespace EstudoAPI.Service.Services
             _pessoaRepository = pessoaRepository;
         }
 
-        public void Create(PessoaDto model)
-            => _pessoaRepository.Create(_mapper.Map<Pessoa>(model));
+        public async Task Create(PessoaDto model)
+        {
+            _pessoaRepository.Create(_mapper.Map<Pessoa>(model));
+            await _pessoaRepository.SalvarAlteracoes();
+        }
 
-        public void Update(PessoaDto model)
-            => _pessoaRepository.Update(_mapper.Map<Pessoa>(model));
-        
+        public async Task Update(PessoaDto model)
+        {
+            _pessoaRepository.Update(_mapper.Map<Pessoa>(model));
+            await _pessoaRepository.SalvarAlteracoes();
+        }
 
-        public void Delete(PessoaDto model)
-            => _pessoaRepository.Delete(_mapper.Map<Pessoa>(model));
+        public async Task Delete(PessoaDto model)
+        {
+            _pessoaRepository.Delete(_mapper.Map<Pessoa>(model));
+            _pessoaRepository.SalvarAlteracoes();
+        }
 
-        public PessoaDto Get(Guid id)
-            => _mapper.Map<PessoaDto>(_pessoaRepository.Get(id));
+        public async Task<PessoaDto> Get(Guid id)
+            => _mapper.Map<PessoaDto>(await _pessoaRepository.Get(id));
 
         public IQueryable<PessoaDto> GetAll()
             => _pessoaRepository.GetAll().ProjectTo<PessoaDto>(_mapper.ConfigurationProvider);
 
-        public PessoaDto GetByCpf(string cpf)
-            => _mapper.Map<PessoaDto>(_pessoaRepository.GetBy(p => p.CPF.Equals(cpf)));
+        public async Task<PessoaDto> GetByCpf(string cpf)
+            => _mapper.Map<PessoaDto>(await _pessoaRepository.GetBy(p => p.CPF.Equals(cpf)));
     }
 }
